@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background-color: #0D0F12;
+    color: #F0F2F5;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #13161B;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2A303C;
+    border-radius: 2px;
+  }
+}
+
+@layer utilities {
+  .card {
+    @apply bg-surface-1 border border-border rounded-xl;
+  }
+  .card-inner {
+    @apply bg-surface-2 border border-border rounded-lg;
+  }
+  .btn-primary {
+    @apply bg-accent-green text-surface-0 font-medium px-4 py-2 rounded-lg 
+           hover:bg-accent-green-dim transition-colors text-sm;
+  }
+  .btn-ghost {
+    @apply border border-border text-text-secondary font-medium px-4 py-2 
+           rounded-lg hover:border-text-muted hover:text-text-primary transition-colors text-sm;
+  }
+  .btn-danger {
+    @apply bg-accent-red/10 text-accent-red border border-accent-red/30 font-medium 
+           px-4 py-2 rounded-lg hover:bg-accent-red/20 transition-colors text-sm;
+  }
+  .input {
+    @apply bg-surface-2 border border-border rounded-lg px-3 py-2 text-sm 
+           text-text-primary placeholder-text-muted outline-none 
+           focus:border-accent-green/50 transition-colors w-full;
+  }
+  .label {
+    @apply text-xs font-medium text-text-secondary uppercase tracking-wide mb-1 block;
+  }
+}
